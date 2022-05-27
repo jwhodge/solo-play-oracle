@@ -1,13 +1,123 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* This is the root styles sheet. All base styling is in here */
+
+/* Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap");
+
+/* Colours */
+
+:root {
+  /* Dark Mode */
+  --dm-bkg-main: #121212;
+  --dm-bkg-invert: #fafffd;
+  --dm-text-primary: #fafffd;
+  --dm-text-invert: #121212;
+  --dm-colour-primary: #177e89;
+  --dm-colour-secondary: #44af69;
+  --dm-accent-primary: #ef8354;
+  --dm-base-shade: #555254;
+  --dm-gradient-primary: linear-gradient(135deg, #177e89, #44af69);
+  --dm-gradient-secondary: linear-gradient(135deg, #177e89, #736f72);
+  --dm-light-overlay-05: rgba(250, 255, 253, 0.05);
+  --dm-light-overlay-11: rgba(250, 255, 253, 0.11);
+  --dm-light-overlay-16: rgba(250, 255, 253, 0.16);
+  --dm-dark-overlay-05: rgba(18, 18, 18, 0.91);
+  --dm-dark-overlay-11: rgba(18, 18, 18, 0.85);
+  --dm-dark-overlay-16: rgba(18, 18, 18, 0.8);
+
+  /* Light Mode */
+  --lm-bkg-main: #fafffd;
+  --lm-bkg-invert: #121212;
+  --lm-text-primary: #121212;
+  --lm-text-invert: #fafffd;
+  --lm-colour-primary: #ef8354;
+  --lm-colour-secondary: #44af69;
+  --lm-accent-primary: #177e89;
+  --lm-base-shade: #555254;
+  --lm-gradient-primary: linear-gradient(135deg, #177e89, #44af69);
+  --lm-gradient-secondary: linear-gradient(135deg, #177e89, #736f72);
+  --lm-dark-overlay-05: rgba(250, 255, 253, 0.91);
+  --lm-dark-overlay-11: rgba(250, 255, 253, 0.85);
+  --lm-dark-overlay-16: rgba(250, 255, 253, 0.8);
+  --lm-light-overlay-05: rgba(18, 18, 18, 0.05);
+  --lm-light-overlay-11: rgba(18, 18, 18, 0.11);
+  --lm-light-overlay-16: rgba(18, 18, 18, 0.16);
+
+  /* Default Mode */
+  --bkg-main: var(--dm-bkg-main);
+  --bkg-invert: var(--dm-bkg-invert);
+  --text-primary: var(--dm-text-primary);
+  --text-invert: var(--dm-text-invert);
+  --colour-primary: var(--dm-colour-primary);
+  --colour-secondary: var(--dm-colour-secondary);
+  --accent-primary: var(--dm-accent-primary);
+  --base-shade: var(--dm-base-shade);
+  --gradient-primary: var(--dm-gradient-primary);
+  --gradient-secondary: var(--dm-gradient-secondary);
+  --light-overlay-05: var(--dm-light-overlay-05);
+  --light-overlay-11: var(--dm-light-overlay-11);
+  --light-overlay-16: var(--dm-dark-overlay-16);
+  --dark-overlay-05: var(--dm-dark-overlay-05);
+  --dark-overlay-11: var(--dm-dark-overlay-11);
+  --dark-overlay-16: var(--dm-dark-overlay-16);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.light {
+  /* Switched Mode */
+  --bkg-main: var(--lm-bkg-main);
+  --bkg-invert: var(--lm-bkg-invert);
+  --text-primary: var(--lm-text-primary);
+  --text-invert: var(--lm-text-invert);
+  --colour-primary: var(--lm-colour-primary);
+  --colour-secondary: var(--lm-colour-secondary);
+  --accent-primary: var(--lm-accent-primary);
+  --base-shade: var(--lm-base-shade);
+  --gradient-primary: var(--lm-gradient-primary);
+  --gradient-secondary: var(--lm-gradient-secondary);
+  --light-overlay-05: var(--lm-light-overlay-05);
+  --light-overlay-11: var(--lm-light-overlay-11);
+  --light-overlay-16: var(--lm-light-overlay-16);
+  --dark-overlay-05: var(--lm-dark-overlay-05);
+  --dark-overlay-11: var(--lm-dark-overlay-11);
+  --dark-overlay-16: var(--lm-dark-overlay-16);
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+h2,
+h3 {
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+li {
+  margin: 0 0 8px 15px;
+}
+
+img {
+  max-width: calc(100vw - 500px);
 }

@@ -1,39 +1,353 @@
-.App {
-  text-align: center;
+/* This is the app specific styling */
+
+/* Accesibility Control */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Page Formatting */
+.pageWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 275px;
+  grid-template-rows: 1fr repeat(5, 2fr);
+  width: 100vw;
+  height: 100vh;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  color: var(--text-primary);
+  background-color: var(--bkg-main);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+/* Header Styles */
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+  padding: 0 8px;
 }
 
-.App-header {
-  min-height: 100vh;
+.title,
+.controlBtnDiv {
+  display: flex;
+  height: 100%;
+}
+
+.logo,
+.pageTitle,
+.copyBtn {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 80%;
+  margin: 10px;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.copyBtn {
+  color: var(--accent-primary);
+  background-color: transparent;
+  border: none;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
+.copyBtn:active {
+  color: var(--colour-secondary);
+}
+
+/* Feed styles */
+
+.storyPanel {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 5;
+  grid-row: 2 / 7;
+  max-width: calc(100vw - 300px);
+  margin: 0 0 10px 15px;
+  background: var(--light-overlay-11);
+  border: solid 1px var(--base-shade);
+  border-radius: 8px;
+}
+
+.feedWrapper {
+  width: 98%;
+  height: 88%;
+  padding: 10px 8px;
+  margin: auto;
+  background: var(--dark-overlay-11);
+  border: solid 1px var(--base-shade);
+  border-radius: 8px;
+}
+
+.gameFeed {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  max-height: calc(80vh - 70px);
+  padding: 0 10px 0 15px;
+  overflow: auto;
+}
+
+.gameFeed strong {
+  color: var(--accent-primary);
+  font-size: 1.2em;
+}
+
+.gameFeed em {
+  color: var(--accent-primary);
+  font-size: 1.2em;
+}
+
+.gameFeed em strong {
+  color: var(--colour-secondary);
+  font-size: 1.1em;
+}
+
+.inputField {
+  display: flex;
+  width: 98%;
+  height: 8%;
+  padding: 10px 8px;
+  margin: auto;
+  background: var(--light-overlay-05);
+  border: solid 1px var(--base-shade);
+  border-radius: 8px;
+}
+
+.inputIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  background: var(--dark-overlay-05);
+  height: 100%;
+  padding: 0 2px 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.inputText {
+  display: flex;
+  width: 100%;
+}
+
+#mainTextInput {
+  background: var(--dark-overlay-05);
+  width: 100%;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: #ececec;
+  padding: 7px 32px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  resize: none;
+  outline: none;
+}
+
+/* Control Panel Styles */
+
+.controlWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  grid-column: 5 / 6;
+  grid-row: 2 / 7;
+  padding-right: 3px;
+  overflow: auto;
+}
+
+.controlUnitWrap {
+  width: 98%;
+  border: solid 1px var(--base-shade);
+  background-color: var(--light-overlay-05);
+  border-radius: 5px;
+  margin: 5px 5px;
+  padding: 5px 9px;
+}
+
+#Oracle {
+  margin-top: 0;
+}
+
+.controlHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.reduced {
+  display: none;
+}
+
+.split {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.formSectionSplit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.twoThirdSplit {
+  width: 58%;
+}
+
+.thirdSplit {
+  width: 38%;
+}
+
+/* Form styles */
+
+.formBtn,
+.formField,
+.textInput,
+.textSubmitBtn {
+  background-color: var(--colour-secondary);
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-primary);
+  padding: 7px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.reducePadding {
+  padding: 7px;
+}
+
+.formBtn {
+  color: var(--text-primary);
+  background-color: var(--colour-primary);
+}
+
+.hotBtn {
+  color: var(--text-invert);
+  background-color: var(--accent-primary);
+}
+
+.textInput {
+  color: var(--text-primary);
+  background-color: var(--base-shade);
+}
+
+.faIcon {
+  color: var(--accent-primary);
+}
+
+.submitBtn {
+  color: var(--text-primary);
+}
+
+.textSubmitBtn {
+  width: 150px;
+  color: var(--text-primary);
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: var(--bkg-invert);
+  color: var(--text-invert);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--bkg-invert) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Animation */
+
+.blink {
+  animation: blinker 1s steps(2, start) infinite;
+}
+
+@keyframes blinker {
+  from {
+    opacity: 1;
   }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
+  to {
+    opacity: 0;
   }
 }
+
+.feedTag {
+  font-weight: 600;
+  font-size: 1.2em;
+  color: var(--colour-primary);
+}
+
+/* .variationTagStyle {
+  color: rgb(206, 33, 206);
+}
+
+.oracleTagStyle {
+  color: rgb(100, 218, 100);
+}
+
+.rollTagStyle {
+  color: rgb(252, 107, 107);
+}
+
+.immersionTagStyle {
+  color: rgb(136, 136, 247);
+} */
+
+/* 
+.actionTagStyle
+.questionTagStyle
+.tacticTagStyle
+.notesTagStyle
+.descriptionTagStyle
+.locationTagStyle
+.checkTagStyle */

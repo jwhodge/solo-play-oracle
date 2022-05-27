@@ -1,0 +1,29 @@
+.popUpMain {
+  display: block;
+  position: fixed;
+  width: 96%;
+  height: 94%;
+  margin: 2%;
+  z-index: 10;
+  background-color: var(--accent-primary);
+  border: solid 1px var(--base-shade);
+  border-radius: 8px;
+}
+
+.popUpContent {
+  position: absolute;
+  width: 98%;
+  height: 97%;
+  margin: 1% 1%;
+  padding: 25px 50px;
+  background-color: var(--bkg-main);
+  border: solid 1px var(--base-shade);
+  border-radius: 8px;
+  overflow: scroll;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}

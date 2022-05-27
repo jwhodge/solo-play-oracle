@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/solo-play-oracle/static/css/main.38821b6d.css",
+    "main.js": "/solo-play-oracle/static/js/main.cb97238b.js",
+    "static/js/787.6fc36f93.chunk.js": "/solo-play-oracle/static/js/787.6fc36f93.chunk.js",
+    "index.html": "/solo-play-oracle/index.html",
+    "main.38821b6d.css.map": "/solo-play-oracle/static/css/main.38821b6d.css.map",
+    "main.cb97238b.js.map": "/solo-play-oracle/static/js/main.cb97238b.js.map",
+    "787.6fc36f93.chunk.js.map": "/solo-play-oracle/static/js/787.6fc36f93.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38821b6d.css",
+    "static/js/main.cb97238b.js"
+  ]
+}

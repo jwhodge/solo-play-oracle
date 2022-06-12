@@ -28,7 +28,7 @@ function DifficultyCheckModule(props) {
       26,
       "label"
     );
-  });
+  }, []);
 
   /*   const checkDc = (event) => {
     event.preventDefault();
